@@ -1,7 +1,7 @@
 # FiveM-Carry-Request
 A simple carry request script using Robbsters Carry Script https://github.com/rubbertoe98/FiveM-Scripts/tree/master/CarryPeople
 
-Free to change what you would like any pull requests if work will be pulled.
+Free to change what you would like any pull requests if it works it will be pulled.
 
 Preview video. https://youtu.be/6fg1CGCcnyI
 

@@ -17,7 +17,6 @@ local carry = {
     }
 }
 
-
 RegisterCommand("carry",function(source, args)
     if not carry.InProgress then
         local closestPlayer = GetClosestPlayer(3)
@@ -63,6 +62,11 @@ Citizen.CreateThread(function()
                 if not IsEntityPlayingAnim(PlayerPedId(), carry.personCarried.animDict, carry.personCarried.anim, 3) then
                     TaskPlayAnim(PlayerPedId(), carry.personCarried.animDict, carry.personCarried.anim, 8.0, -8.0, 100000, carry.personCarried.flag, 0, false, false, false)
                 end
+                DisableControlAction(0, 24, true) -- Disable attack
+                DisableControlAction(0, 257, true) -- Disable attack 2
+                DisableControlAction(0, 140, true) -- Disable melee attack light
+                DisableControlAction(0, 141, true) -- Disable melee attack heavy
+                DisableControlAction(0, 142, true) -- Disable melee attack alternate
             elseif carry.type == "carrying" then
                 if not IsEntityPlayingAnim(PlayerPedId(), carry.personCarrying.animDict, carry.personCarrying.anim, 3) then
                     TaskPlayAnim(PlayerPedId(), carry.personCarrying.animDict, carry.personCarrying.anim, 8.0, -8.0, 100000, carry.personCarrying.flag, 0, false, false, false)
